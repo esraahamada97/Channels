@@ -11,7 +11,6 @@
 		CEE73C4E242A09BB00A7DDB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE73C4D242A09BB00A7DDB3 /* SceneDelegate.swift */; };
 		CEE73C55242A09BC00A7DDB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE73C54242A09BC00A7DDB3 /* Assets.xcassets */; };
 		CEE73C58242A09BC00A7DDB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE73C56242A09BC00A7DDB3 /* LaunchScreen.storyboard */; };
-		CEE73C63242A1AB800A7DDB3 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE73C62242A1AB800A7DDB3 /* Assets.swift */; };
 		CEE73C67242A1B0300A7DDB3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE73C66242A1B0300A7DDB3 /* Fonts.swift */; };
 		CEE73C69242A1B3E00A7DDB3 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEE73C68242A1B3E00A7DDB3 /* Localization.strings */; };
 		CEE73C7A242A26D200A7DDB3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE73C78242A26D200A7DDB3 /* HomeViewController.swift */; };
@@ -25,6 +24,7 @@
 		CEE73C8B242A2D0C00A7DDB3 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE73C8A242A2D0C00A7DDB3 /* Component.swift */; };
 		CEE73C8D242A2D2400A7DDB3 /* Cahsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE73C8C242A2D2400A7DDB3 /* Cahsing.swift */; };
 		CEE73C8F242A2D3600A7DDB3 /* Http Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE73C8E242A2D3600A7DDB3 /* Http Request.swift */; };
+		CEE73C93242A390900A7DDB3 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE73C92242A390900A7DDB3 /* Assets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,6 @@
 		CEE73C54242A09BC00A7DDB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEE73C57242A09BC00A7DDB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEE73C59242A09BC00A7DDB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEE73C62242A1AB800A7DDB3 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		CEE73C66242A1B0300A7DDB3 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		CEE73C68242A1B3E00A7DDB3 /* Localization.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localization.strings; sourceTree = "<group>"; };
 		CEE73C78242A26D200A7DDB3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +47,7 @@
 		CEE73C8A242A2D0C00A7DDB3 /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		CEE73C8C242A2D2400A7DDB3 /* Cahsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cahsing.swift; sourceTree = "<group>"; };
 		CEE73C8E242A2D3600A7DDB3 /* Http Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Http Request.swift"; sourceTree = "<group>"; };
+		CEE73C92242A390900A7DDB3 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +110,8 @@
 		CEE73C61242A1AA300A7DDB3 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				CEE73C91242A38AA00A7DDB3 /* Generated */,
 				CEE73C54242A09BC00A7DDB3 /* Assets.xcassets */,
-				CEE73C62242A1AB800A7DDB3 /* Assets.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -255,6 +255,14 @@
 			path = Startup;
 			sourceTree = "<group>";
 		};
+		CEE73C91242A38AA00A7DDB3 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				CEE73C92242A390900A7DDB3 /* Assets.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -262,6 +270,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEE73C5C242A09BC00A7DDB3 /* Build configuration list for PBXNativeTarget "Channels" */;
 			buildPhases = (
+				CEE73C90242A329100A7DDB3 /* SwiftGen */,
 				CEE73C44242A09BB00A7DDB3 /* Sources */,
 				CEE73C45242A09BB00A7DDB3 /* Frameworks */,
 				CEE73C46242A09BB00A7DDB3 /* Resources */,
@@ -322,6 +331,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CEE73C90242A329100A7DDB3 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftgen >/dev/null; then\n    swiftgen\nelse\n    echo \"warning: SwiftGen not installed, download from https://github.com/SwiftGen/SwiftGen\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CEE73C44242A09BB00A7DDB3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -335,12 +365,12 @@
 				CEE73C7D242A279300A7DDB3 /* AppManager.swift in Sources */,
 				CEE73C8D242A2D2400A7DDB3 /* Cahsing.swift in Sources */,
 				CEE73C8B242A2D0C00A7DDB3 /* Component.swift in Sources */,
+				CEE73C93242A390900A7DDB3 /* Assets.swift in Sources */,
 				CEE73C89242A2CD600A7DDB3 /* Extensions.swift in Sources */,
 				CEE73C7F242A282F00A7DDB3 /* Container.swift in Sources */,
 				CEE73C4E242A09BB00A7DDB3 /* SceneDelegate.swift in Sources */,
 				CEE73C85242A2C6C00A7DDB3 /* User.swift in Sources */,
 				CEE73C8F242A2D3600A7DDB3 /* Http Request.swift in Sources */,
-				CEE73C63242A1AB800A7DDB3 /* Assets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
