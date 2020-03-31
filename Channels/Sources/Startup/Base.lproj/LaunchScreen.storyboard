@@ -19,7 +19,7 @@
                                 <rect key="frame" x="82" y="323" width="250" height="250"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music" translatesAutoresizingMaskIntoConstraints="NO" id="K8N-k0-GXO">
-                                        <rect key="frame" x="0.0" y="0.0" width="250.00000000000023" height="250"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

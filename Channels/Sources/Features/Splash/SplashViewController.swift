@@ -17,9 +17,9 @@ class SplashViewController: UIViewController {
         // Do any additional setup after loading the view.
         //shakeView(vw: containerView)
         
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-//            self.splashTimeOut()
-//        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.7) {
+            self.splashTimeOut()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -33,49 +33,29 @@ class SplashViewController: UIViewController {
         AppManager.shared.window?.makeKeyAndVisible()
         
     }
+    
+    
     private func animateView() {
-let start = self.containerView.center
-
-UIView.animateKeyframes(withDuration: 3, delay: 0, options: .calculationModeCubic, animations: {
-    UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.25) {
-        self.containerView.transform = CGAffineTransform(scaleX: 2, y: 2)
-    }
-
-    UIView.addKeyframe(withRelativeStartTime: 0.25, relativeDuration: 0.25) {
-        self.containerView.center = CGPoint(x: self.view.bounds.midX, y: self.view.bounds.maxY)
-    }
-
-    UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.25) {
-        self.containerView.center = CGPoint(x: self.view.bounds.width, y: start.y)
-    }
-
-    UIView.addKeyframe(withRelativeStartTime: 0.75, relativeDuration: 0.25) {
-        self.containerView.center = start
-    }
-})
-//      UIView.animate(withDuration: 3.0,
-//                     delay: 0.2,
-//                     options: options,
-//                     animations: { [weak self] in
-//                      self?.containerView.frame.size.height *= 1.28
-//                      self?.containerView.frame.size.width *= 1.28
-//      }, completion: nil)
-//
-//      UIView.animate(withDuration: 2.4,
-//                     delay: 0.1,
-//                     options: options,
-//                     animations: { [weak self] in
-//                      self?.containerView.frame.size.height *= 1.15
-//                      self?.containerView.frame.size.width *= 1.15
-//      }, completion: nil)
-//
-//      UIView.animate(withDuration: 3.2,
-//                     delay: 0.5,
-//                     options: options,
-//                     animations: { [weak self] in
-//                      self?.containerView.frame.size.height *= 1.23
-//                      self?.containerView.frame.size.width *= 1.23
-//      }, completion: nil)
+        let start = self.containerView.center
+        
+        UIView.animateKeyframes(withDuration: 2.5, delay: 0, options: .calculationModeCubic, animations: {
+            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.25) {
+                self.containerView.transform = CGAffineTransform(scaleX: 2, y: 2)
+            }
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.25, relativeDuration: 0.25) {
+                self.containerView.center = CGPoint(x: self.view.bounds.midX, y: self.view.bounds.maxY)
+            }
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.25) {
+                self.containerView.center = CGPoint(x: self.view.bounds.width, y: start.y)
+            }
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.75, relativeDuration: 0.25) {
+                self.containerView.center = start
+            }
+        })
+        
     }
     /*
      // MARK: - Navigation
