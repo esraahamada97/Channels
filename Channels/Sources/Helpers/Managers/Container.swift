@@ -13,4 +13,7 @@ class Container {
     class func getHomeScene() -> UIViewController {
            return HomeViewController()
        }
+    class func getSplashScene() -> UIViewController {
+        return SplashViewController()
+    }
 }

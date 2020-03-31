@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE8DBD9E24335E38008C5DB9 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DBD9C24335E38008C5DB9 /* SplashViewController.swift */; };
+		CE8DBD9F24335E38008C5DB9 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8DBD9D24335E38008C5DB9 /* SplashViewController.xib */; };
 		CEE73C4C242A09BB00A7DDB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE73C4B242A09BB00A7DDB3 /* AppDelegate.swift */; };
 		CEE73C4E242A09BB00A7DDB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE73C4D242A09BB00A7DDB3 /* SceneDelegate.swift */; };
 		CEE73C55242A09BC00A7DDB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE73C54242A09BC00A7DDB3 /* Assets.xcassets */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE8DBD9C24335E38008C5DB9 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		CE8DBD9D24335E38008C5DB9 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		CEE73C48242A09BB00A7DDB3 /* Channels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Channels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE73C4B242A09BB00A7DDB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEE73C4D242A09BB00A7DDB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE8DBD9B24335E04008C5DB9 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				CE8DBD9C24335E38008C5DB9 /* SplashViewController.swift */,
+				CE8DBD9D24335E38008C5DB9 /* SplashViewController.xib */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		CEE73C3F242A09BB00A7DDB3 = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +193,7 @@
 		CEE73C6E242A1BAA00A7DDB3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				CE8DBD9B24335E04008C5DB9 /* Splash */,
 				CEE73C6F242A1BBB00A7DDB3 /* Home */,
 			);
 			path = Features;
@@ -334,6 +348,7 @@
 				CEE73C58242A09BC00A7DDB3 /* LaunchScreen.storyboard in Resources */,
 				CEE73C69242A1B3E00A7DDB3 /* Localization.strings in Resources */,
 				CEE73C55242A09BC00A7DDB3 /* Assets.xcassets in Resources */,
+				CE8DBD9F24335E38008C5DB9 /* SplashViewController.xib in Resources */,
 				CEE73C7B242A26D200A7DDB3 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,6 +396,7 @@
 				CEE73C4E242A09BB00A7DDB3 /* SceneDelegate.swift in Sources */,
 				CEE73C85242A2C6C00A7DDB3 /* User.swift in Sources */,
 				CEE73C8F242A2D3600A7DDB3 /* Http Request.swift in Sources */,
+				CE8DBD9E24335E38008C5DB9 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
