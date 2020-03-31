@@ -1,5 +1,5 @@
 //
-//  Assets.swift
+//  Configration.swift
 //  Channels
 //
 //  Created by user on 3/24/20.

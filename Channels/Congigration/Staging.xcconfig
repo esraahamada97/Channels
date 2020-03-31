@@ -1,0 +1,13 @@
+//
+//  Staging.xcconfig
+//  Channels
+//
+//  Created by user on 3/26/20.
+//  Copyright © 2020 user. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+IS_APP_NAME = Channels Staging
+IS_APP_VERSION = 0.3
+IS_APP_BUNDLE_ID = ibtikar.Channels.esraa.hamada
