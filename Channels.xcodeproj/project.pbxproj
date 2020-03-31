@@ -87,7 +87,7 @@
 			children = (
 				CEE73C6C242A1B8400A7DDB3 /* Sources */,
 				CEE73C6B242A1B6500A7DDB3 /* Stores */,
-				CEE73C6A242A1B5400A7DDB3 /* Congigration */,
+				CEE73C6A242A1B5400A7DDB3 /* Configration */,
 				CEE73C60242A1A5800A7DDB3 /* Resources */,
 				CEE73C5F242A19CC00A7DDB3 /* Supporting Files */,
 			);
@@ -137,7 +137,7 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
-		CEE73C6A242A1B5400A7DDB3 /* Congigration */ = {
+		CEE73C6A242A1B5400A7DDB3 /* Configration */ = {
 			isa = PBXGroup;
 			children = (
 				CEE73C80242A2C3800A7DDB3 /* Configration.swift */,
@@ -145,7 +145,7 @@
 				CEED09C6242CCCEB002444EB /* Debug.xcconfig */,
 				CEED09C7242CCCF9002444EB /* Release.xcconfig */,
 			);
-			path = Congigration;
+			path = Configration;
 			sourceTree = "<group>";
 		};
 		CEE73C6B242A1B6500A7DDB3 /* Stores */ = {
