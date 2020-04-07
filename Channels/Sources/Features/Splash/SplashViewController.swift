@@ -10,7 +10,7 @@ import UIKit
 
 class SplashViewController: UIViewController {
     
-    @IBOutlet weak var containerView: UIView!
+    @IBOutlet private weak var containerView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,20 +20,21 @@ class SplashViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.7) {
             self.splashTimeOut()
         }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         animateView()
+        //animationProperty()
     }
     
-    func splashTimeOut(){
+    func splashTimeOut() {
         let homeView = Container.getHomeScene()
         AppManager.shared.window?.rootViewController = homeView
         AppManager.shared.window?.makeKeyAndVisible()
         
     }
-    
     
     private func animateView() {
         let start = self.containerView.center
@@ -56,6 +57,20 @@ class SplashViewController: UIViewController {
             }
         })
         
+    }
+    
+    func animationProperty() {
+        let duration = 0.3
+        let animator = UIViewPropertyAnimator(duration: duration, curve: .linear) {
+            self.containerView.backgroundColor = .blue
+        }
+
+        // At any point during the runtime, we can amend the list of animations like so
+        animator.addAnimations {
+            self.containerView.transform = .init(scaleX: 1.5, y: 1.5)
+        }
+
+        animator.startAnimation()
     }
     /*
      // MARK: - Navigation

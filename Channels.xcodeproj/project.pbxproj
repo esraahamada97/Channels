@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		CE8DBD9E24335E38008C5DB9 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DBD9C24335E38008C5DB9 /* SplashViewController.swift */; };
 		CE8DBD9F24335E38008C5DB9 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8DBD9D24335E38008C5DB9 /* SplashViewController.xib */; };
+		CECBA2D8243C8F5F0021C1F0 /* AppDelegate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECBA2D7243C8F5F0021C1F0 /* AppDelegate+Extensions.swift */; };
+		CECBA2DD243C8FA50021C1F0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECBA2DC243C8FA50021C1F0 /* NetworkManager.swift */; };
+		CECBA2E0243C908D0021C1F0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECBA2DF243C908D0021C1F0 /* Colors.xcassets */; };
 		CEE73C4C242A09BB00A7DDB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE73C4B242A09BB00A7DDB3 /* AppDelegate.swift */; };
 		CEE73C4E242A09BB00A7DDB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE73C4D242A09BB00A7DDB3 /* SceneDelegate.swift */; };
 		CEE73C55242A09BC00A7DDB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE73C54242A09BC00A7DDB3 /* Assets.xcassets */; };
@@ -33,6 +36,9 @@
 /* Begin PBXFileReference section */
 		CE8DBD9C24335E38008C5DB9 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		CE8DBD9D24335E38008C5DB9 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		CECBA2D7243C8F5F0021C1F0 /* AppDelegate+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Extensions.swift"; sourceTree = "<group>"; };
+		CECBA2DC243C8FA50021C1F0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CECBA2DF243C908D0021C1F0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		CEE73C48242A09BB00A7DDB3 /* Channels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Channels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE73C4B242A09BB00A7DDB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEE73C4D242A09BB00A7DDB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +85,22 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
+		CECBA2DB243C8F8D0021C1F0 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				CECBA2DC243C8FA50021C1F0 /* NetworkManager.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		CECBA2DE243C905F0021C1F0 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				CECBA2DF243C908D0021C1F0 /* Colors.xcassets */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
 		CEE73C3F242A09BB00A7DDB3 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +140,7 @@
 		CEE73C60242A1A5800A7DDB3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CECBA2DE243C905F0021C1F0 /* Colors */,
 				CEE73C65242A1AD500A7DDB3 /* Localization */,
 				CEE73C64242A1AC400A7DDB3 /* Fonts */,
 				CEE73C61242A1AA300A7DDB3 /* Assets */,
@@ -172,6 +195,7 @@
 		CEE73C6C242A1B8400A7DDB3 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				CECBA2DB243C8F8D0021C1F0 /* NetworkLayer */,
 				CEE73C77242A23CD00A7DDB3 /* Startup */,
 				CEE73C76242A23A300A7DDB3 /* Services */,
 				CEE73C75242A239700A7DDB3 /* Common */,
@@ -274,6 +298,7 @@
 				CEE73C56242A09BC00A7DDB3 /* LaunchScreen.storyboard */,
 				CEE73C4D242A09BB00A7DDB3 /* SceneDelegate.swift */,
 				CEE73C4B242A09BB00A7DDB3 /* AppDelegate.swift */,
+				CECBA2D7243C8F5F0021C1F0 /* AppDelegate+Extensions.swift */,
 			);
 			path = Startup;
 			sourceTree = "<group>";
@@ -297,6 +322,7 @@
 				CEE73C44242A09BB00A7DDB3 /* Sources */,
 				CEE73C45242A09BB00A7DDB3 /* Frameworks */,
 				CEE73C46242A09BB00A7DDB3 /* Resources */,
+				CE7313D0243B5DED00A471AE /* swiftlint */,
 			);
 			buildRules = (
 			);
@@ -348,6 +374,7 @@
 				CEE73C58242A09BC00A7DDB3 /* LaunchScreen.storyboard in Resources */,
 				CEE73C69242A1B3E00A7DDB3 /* Localization.strings in Resources */,
 				CEE73C55242A09BC00A7DDB3 /* Assets.xcassets in Resources */,
+				CECBA2E0243C908D0021C1F0 /* Colors.xcassets in Resources */,
 				CE8DBD9F24335E38008C5DB9 /* SplashViewController.xib in Resources */,
 				CEE73C7B242A26D200A7DDB3 /* HomeViewController.xib in Resources */,
 			);
@@ -356,6 +383,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		CE7313D0243B5DED00A471AE /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		CEE73C90242A329100A7DDB3 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -381,6 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECBA2DD243C8FA50021C1F0 /* NetworkManager.swift in Sources */,
 				CEE73C81242A2C3800A7DDB3 /* Configration.swift in Sources */,
 				CEE73C7A242A26D200A7DDB3 /* HomeViewController.swift in Sources */,
 				CEE73C87242A2C9E00A7DDB3 /* AnyHomeView.swift in Sources */,
@@ -391,6 +437,7 @@
 				CEE73C8B242A2D0C00A7DDB3 /* Component.swift in Sources */,
 				CEED09C2242CCB22002444EB /* PresistanceManager.swift in Sources */,
 				CEE73C93242A390900A7DDB3 /* Assets.swift in Sources */,
+				CECBA2D8243C8F5F0021C1F0 /* AppDelegate+Extensions.swift in Sources */,
 				CEE73C89242A2CD600A7DDB3 /* Extensions.swift in Sources */,
 				CEE73C7F242A282F00A7DDB3 /* Container.swift in Sources */,
 				CEE73C4E242A09BB00A7DDB3 /* SceneDelegate.swift in Sources */,
