@@ -1,10 +1,26 @@
-input_dir: Channels/Resources/Assets
-output_dir: Channels/Resources/Assets/Generated
-xcassets:
+input_dir: Channels
+output_dir: Channels
+trings:
   inputs:
-    - Assets.xcassets
+    - Resources/Localization/Localization.strings
+  outputs:
+    output: Resources/Localization/Localized.swift
+custom_rules:
+  swiftgen_strings:
+    name: "SwiftGen Strings"
+    regex: 'NSLocalizedString'
+    message: "Use L10n.key instead"
+    severity: error
+fonts:
+  inputs: Resources/Fonts
   outputs:
     templateName: swift4
-    output: Assets.swift
+    output: Resources/Fonts/Fonts.swift
+xcassets:
+  inputs:
+    - Resources/Assets/Assets.xcassets
+  outputs:
+    templateName: swift4
+    output: Resources/Assets/Assets.swift
 excluded:
 - Pods
