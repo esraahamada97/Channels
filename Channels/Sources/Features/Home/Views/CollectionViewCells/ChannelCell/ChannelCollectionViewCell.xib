@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gilroy-ExtraBold.otf">
+            <string>Gilroy-ExtraBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier=" ChannelCollectionViewCell" id="gTV-IL-0wX" customClass="ChannelCollectionViewCell" customModule="Channels" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="274" height="511"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="274" height="511"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kNv-Ns-Qch">
+                        <rect key="frame" x="0.0" y="0.0" width="274" height="511"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pa1-tN-QS9">
+                                <rect key="frame" x="0.0" y="0.0" width="274" height="354"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uAW-wl-tjj">
+                                        <rect key="frame" x="0.0" y="0.0" width="274" height="354"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" name="PrimaryColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="uAW-wl-tjj" secondAttribute="bottom" id="2uN-1A-JSq"/>
+                                    <constraint firstItem="uAW-wl-tjj" firstAttribute="top" secondItem="pa1-tN-QS9" secondAttribute="top" id="AuN-EP-SZy"/>
+                                    <constraint firstAttribute="height" constant="354" id="RXF-8z-gUj"/>
+                                    <constraint firstAttribute="width" constant="274" id="aJD-Ko-wBx"/>
+                                    <constraint firstItem="uAW-wl-tjj" firstAttribute="leading" secondItem="pa1-tN-QS9" secondAttribute="leading" id="bQb-BT-9EO"/>
+                                    <constraint firstAttribute="trailing" secondItem="uAW-wl-tjj" secondAttribute="trailing" id="kjX-p7-xz7"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWY-HB-Sre">
+                                <rect key="frame" x="6" y="369" width="165" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="aKu-9A-Ouz"/>
+                                    <constraint firstAttribute="width" constant="165" id="qxK-Co-RXv"/>
+                                </constraints>
+                                <string key="text">The Cure For
+Loneliness</string>
+                                <fontDescription key="fontDescription" name="Gilroy-ExtraBold" family="Gilroy" pointSize="24"/>
+                                <color key="textColor" name="TitleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpO-Ge-EvJ">
+                                <rect key="frame" x="6" y="453" width="138" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="7qa-dQ-hqx"/>
+                                    <constraint firstAttribute="width" constant="138" id="EVU-mE-qjz"/>
+                                </constraints>
+                                <string key="text">The Cure For
+ Loneliness</string>
+                                <fontDescription key="fontDescription" name="Gilroy-ExtraBold" family="Gilroy" pointSize="19"/>
+                                <color key="textColor" name="SubTitleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="PrimaryColor"/>
+                        <constraints>
+                            <constraint firstItem="XpO-Ge-EvJ" firstAttribute="top" secondItem="pWY-HB-Sre" secondAttribute="bottom" constant="10" id="Cky-WE-W6s"/>
+                            <constraint firstItem="XpO-Ge-EvJ" firstAttribute="leading" secondItem="kNv-Ns-Qch" secondAttribute="leading" constant="6" id="FZm-CN-4Dd"/>
+                            <constraint firstItem="pWY-HB-Sre" firstAttribute="leading" secondItem="kNv-Ns-Qch" secondAttribute="leading" constant="6" id="MJg-tj-qPp"/>
+                            <constraint firstItem="pa1-tN-QS9" firstAttribute="leading" secondItem="kNv-Ns-Qch" secondAttribute="leading" id="RU5-fP-fPh"/>
+                            <constraint firstAttribute="trailing" secondItem="pa1-tN-QS9" secondAttribute="trailing" id="THi-yb-xET"/>
+                            <constraint firstItem="pWY-HB-Sre" firstAttribute="top" secondItem="pa1-tN-QS9" secondAttribute="bottom" constant="15" id="UYZ-ZV-K0E"/>
+                            <constraint firstItem="pa1-tN-QS9" firstAttribute="top" secondItem="kNv-Ns-Qch" secondAttribute="top" id="ldh-vg-NWy"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="kNv-Ns-Qch" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0QT-pQ-g6I"/>
+                <constraint firstAttribute="bottom" secondItem="kNv-Ns-Qch" secondAttribute="bottom" id="0Qu-xB-yXb"/>
+                <constraint firstItem="kNv-Ns-Qch" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9Gm-Ct-9pP"/>
+                <constraint firstAttribute="trailing" secondItem="kNv-Ns-Qch" secondAttribute="trailing" id="u9v-IK-NYc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="274" height="511"/>
+            <connections>
+                <outlet property="containerView" destination="kNv-Ns-Qch" id="3AI-Z3-Jyd"/>
+                <outlet property="imageContainerView" destination="pa1-tN-QS9" id="m7c-pZ-h1o"/>
+                <outlet property="imageView" destination="uAW-wl-tjj" id="Xgt-cX-nOS"/>
+                <outlet property="subTitleLabel" destination="XpO-Ge-EvJ" id="MdK-92-Q8E"/>
+                <outlet property="titleLabel" destination="pWY-HB-Sre" id="4fP-2C-ZeX"/>
+            </connections>
+            <point key="canvasLocation" x="234.78260869565219" y="134.26339285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="PrimaryColor">
+            <color red="0.14200000464916229" green="0.15199999511241913" blue="0.18000000715255737" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="SubTitleColor">
+            <color red="0.57700002193450928" green="0.58799999952316284" blue="0.60799998044967651" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="TitleColor">
+            <color red="0.95300000905990601" green="0.95300000905990601" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

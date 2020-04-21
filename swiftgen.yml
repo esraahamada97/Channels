@@ -16,6 +16,7 @@ fonts:
   outputs:
     templateName: swift4
     output: Resources/Fonts/Fonts.swift
+   
 xcassets:
   inputs:
     - Resources/Assets/Assets.xcassets

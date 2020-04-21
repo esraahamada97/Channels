@@ -43,6 +43,7 @@ class AppManager: NSObject {
        window.rootViewController = vc
        window.makeKeyAndVisible()
        self.shared.window = window
+    
    }
    
    func setWindowRoot(_ viewController: UIViewController) {

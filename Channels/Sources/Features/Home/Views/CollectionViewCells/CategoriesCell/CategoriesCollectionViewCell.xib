@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoriesCollectionViewCell" id="gTV-IL-0wX" customClass="CategoriesCollectionViewCell" customModule="Channels" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="247" height="109"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="247" height="109"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6W-HQ-nnb">
+                        <rect key="frame" x="0.0" y="0.0" width="247" height="109"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eU-Fg-14D">
+                                <rect key="frame" x="88" y="39.5" width="71.5" height="30.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="26"/>
+                                <color key="textColor" name="TitleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23185816410000001" green="0.23877263069999999" blue="0.2666708827" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="3eU-Fg-14D" firstAttribute="centerX" secondItem="N6W-HQ-nnb" secondAttribute="centerX" id="Nek-xJ-rld"/>
+                            <constraint firstItem="3eU-Fg-14D" firstAttribute="centerY" secondItem="N6W-HQ-nnb" secondAttribute="centerY" id="fk3-T8-4f0"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="N6W-HQ-nnb" secondAttribute="bottom" id="GTO-aR-qFq"/>
+                <constraint firstAttribute="trailing" secondItem="N6W-HQ-nnb" secondAttribute="trailing" id="Sae-21-5pP"/>
+                <constraint firstItem="N6W-HQ-nnb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dhk-mu-FtK"/>
+                <constraint firstItem="N6W-HQ-nnb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pPY-KE-shK"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="247" height="109"/>
+            <connections>
+                <outlet property="categoryLabel" destination="3eU-Fg-14D" id="ESp-Ja-5UW"/>
+                <outlet property="containerView" destination="N6W-HQ-nnb" id="ZV2-9D-Mg7"/>
+            </connections>
+            <point key="canvasLocation" x="-36" y="-3"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="TitleColor">
+            <color red="0.95300000905990601" green="0.95300000905990601" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
