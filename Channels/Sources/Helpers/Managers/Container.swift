@@ -11,7 +11,7 @@ import UIKit
 
 class Container {
     class func getHomeScene() -> UIViewController {
-           return HomeViewController()
+        return HomeModule.createModule()
        }
     class func getSplashScene() -> UIViewController {
         return SplashViewController()

@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Channels" customModuleProvider="target">
             <connections>
-                <outlet property="collectionView" destination="fkA-iB-Pey" id="xBo-GK-8TW"/>
+                <outlet property="collectionView" destination="fkA-iB-Pey" id="wh0-9g-l0p"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,8 +19,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fkA-iB-Pey">
-                    <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fkA-iB-Pey">
+                    <rect key="frame" x="0.0" y="9" width="375" height="795"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" name="PrimaryColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="deB-XH-svu">
                         <size key="itemSize" width="50" height="50"/>
@@ -30,14 +31,9 @@
                     </collectionViewFlowLayout>
                 </collectionView>
             </subviews>
-            <constraints>
-                <constraint firstItem="h4t-Pb-wpG" firstAttribute="trailing" secondItem="fkA-iB-Pey" secondAttribute="trailing" id="A1T-9w-1sZ"/>
-                <constraint firstItem="fkA-iB-Pey" firstAttribute="leading" secondItem="h4t-Pb-wpG" secondAttribute="leading" id="PVy-WZ-Ryp"/>
-                <constraint firstItem="h4t-Pb-wpG" firstAttribute="bottom" secondItem="fkA-iB-Pey" secondAttribute="bottom" id="lVN-Um-FxT"/>
-                <constraint firstItem="fkA-iB-Pey" firstAttribute="top" secondItem="h4t-Pb-wpG" secondAttribute="top" id="zRK-aw-mEl"/>
-            </constraints>
+            <color key="backgroundColor" name="PrimaryColor"/>
             <viewLayoutGuide key="safeArea" id="h4t-Pb-wpG"/>
-            <point key="canvasLocation" x="138" y="140"/>
+            <point key="canvasLocation" x="136.80000000000001" y="139.65517241379311"/>
         </view>
     </objects>
     <resources>

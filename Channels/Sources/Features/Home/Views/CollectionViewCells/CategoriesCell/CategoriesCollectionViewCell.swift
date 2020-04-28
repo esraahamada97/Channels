@@ -20,7 +20,8 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func configureCategoryCell() {
+    func configureCategoryCell(name: String) {
+        categoryLabel.text = name
     }
 
 }

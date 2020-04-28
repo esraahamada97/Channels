@@ -12,11 +12,11 @@ import IGListKit
 
 class HomeViewController: BaseViewController {
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
     var cetegories: [Category] = []
     var channels: [Channel] = []
     lazy var adapter: ListAdapter = {
-      return ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 0)
+        return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
     }()
     
     // MARK: - Presenter
@@ -41,6 +41,7 @@ class HomeViewController: BaseViewController {
         super.viewDidLoad()
         adapter.collectionView = collectionView
         adapter.dataSource = self
+        adapter.performUpdates(animated: true, completion: nil)
         presenter?.loadChannels()
         presenter?.loadEposides()
         presenter?.loadCategories()
@@ -73,31 +74,33 @@ extension HomeViewController: HomeViewProtocol {
     }
     
     func setCategories(categorieas: [Category]) {
-        cetegories = categorieas
+        self.cetegories = categorieas
     }
     
 }
 
 extension HomeViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-        let sectionType: SectionType = .channels
-        switch sectionType {
-        case .categories:
-            return self.cetegories
-        default:
-            return self.channels
-        }
+        return cetegories
+//        let sectionType: SectionType = .categories
+//        switch sectionType {
+//        case .categories:
+//            return self.cetegories
+//        default:
+//            return self.channels
+//        }
     }
 
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-        switch object {
-        case is Category:
+       // switch object {
             return CategoriesListSectionController()
-        case is Media:
-            return NewEposidesSectionController()
-        default:
-            return ListSectionController()
-        }
+//        case is Category:
+//            return CategoriesListSectionController()
+//        case is Media:
+//            return NewEposidesSectionController()
+//        default:
+//            return ListSectionController()
+//        }
     }
 
     func emptyView(for listAdapter: ListAdapter) -> UIView? {

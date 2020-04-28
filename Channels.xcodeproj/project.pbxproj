@@ -70,7 +70,6 @@
 		CEC0BFED24581CE8000E03ED /* Category.Success.json in Resources */ = {isa = PBXBuildFile; fileRef = CEC0BFEB24581CE8000E03ED /* Category.Success.json */; };
 		CEC0BFF024582409000E03ED /* NewEposidesSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC0BFEF24582409000E03ED /* NewEposidesSectionController.swift */; };
 		CEC0BFF524583571000E03ED /* CategoriesListSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC0BFF424583571000E03ED /* CategoriesListSectionController.swift */; };
-		CEC0BFF724583588000E03ED /* CategorySectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC0BFF624583588000E03ED /* CategorySectionController.swift */; };
 		CECBA2D8243C8F5F0021C1F0 /* AppDelegate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECBA2D7243C8F5F0021C1F0 /* AppDelegate+Extensions.swift */; };
 		CECBA2DD243C8FA50021C1F0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECBA2DC243C8FA50021C1F0 /* NetworkManager.swift */; };
 		CEE73C4C242A09BB00A7DDB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE73C4B242A09BB00A7DDB3 /* AppDelegate.swift */; };
@@ -156,7 +155,6 @@
 		CEC0BFEB24581CE8000E03ED /* Category.Success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Category.Success.json; sourceTree = "<group>"; };
 		CEC0BFEF24582409000E03ED /* NewEposidesSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEposidesSectionController.swift; sourceTree = "<group>"; };
 		CEC0BFF424583571000E03ED /* CategoriesListSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesListSectionController.swift; sourceTree = "<group>"; };
-		CEC0BFF624583588000E03ED /* CategorySectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySectionController.swift; sourceTree = "<group>"; };
 		CECBA2D7243C8F5F0021C1F0 /* AppDelegate+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Extensions.swift"; sourceTree = "<group>"; };
 		CECBA2DC243C8FA50021C1F0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CEE73C48242A09BB00A7DDB3 /* Channels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Channels.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -340,7 +338,6 @@
 			isa = PBXGroup;
 			children = (
 				CEC0BFF424583571000E03ED /* CategoriesListSectionController.swift */,
-				CEC0BFF624583588000E03ED /* CategorySectionController.swift */,
 			);
 			path = CategorySections;
 			sourceTree = "<group>";
@@ -788,7 +785,6 @@
 				CECBA2DD243C8FA50021C1F0 /* NetworkManager.swift in Sources */,
 				CEE73C81242A2C3800A7DDB3 /* Configration.swift in Sources */,
 				CEC0BFE624581C14000E03ED /* Media.swift in Sources */,
-				CEC0BFF724583588000E03ED /* CategorySectionController.swift in Sources */,
 				CE5244DB2455D306001D60AB /* HomeModel.swift in Sources */,
 				CE5244DE2455D306001D60AB /* HomeWireframe.swift in Sources */,
 				CE5244D92455D306001D60AB /* HomeViewController.swift in Sources */,
