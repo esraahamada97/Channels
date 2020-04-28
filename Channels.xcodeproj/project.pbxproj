@@ -548,7 +548,6 @@
 				5826266F33485D8232F76BB8 /* Pods-Channels.staging.xcconfig */,
 				1238499D117C25C52FA07737 /* Pods-Channels.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -907,7 +906,7 @@
 		};
 		CEE73C5D242A09BC00A7DDB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CEED09C6242CCCEB002444EB /* Debug.xcconfig */;
+			baseConfigurationReference = 43387C85AA31E62636BB2A66 /* Pods-Channels.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -926,7 +925,7 @@
 		};
 		CEE73C5E242A09BC00A7DDB3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CEED09C7242CCCF9002444EB /* Release.xcconfig */;
+			baseConfigurationReference = 1238499D117C25C52FA07737 /* Pods-Channels.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1006,7 +1005,7 @@
 		};
 		CEED09C4242CCC1C002444EB /* Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CEED09C5242CCC97002444EB /* Staging.xcconfig */;
+			baseConfigurationReference = 5826266F33485D8232F76BB8 /* Pods-Channels.staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
