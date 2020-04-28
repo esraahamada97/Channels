@@ -9,5 +9,19 @@
 import Foundation
 
 class HomeModel: BaseModel, HomeModelProtocol {
-
+    func getChannelsFromDataSourse() -> [Channel] {
+       DataSource.shared.loadChannelDataFromJson()
+        return DataSource.shared.channels
+    }
+    
+    func getEposidesFromDataSourse() -> [Media] {
+        DataSource.shared.loadEposidesDataFromJson()
+        return DataSource.shared.eposides
+    }
+    
+    func getCategopriesFromDataSourse() -> [Category] {
+        DataSource.shared.loadCategoriesDataFromJson()
+        return DataSource.shared.categories
+    }
+    
 }

@@ -12,17 +12,8 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct ChannelData: Codable {
 
-        let channels: [Channel]?
-
-        enum CodingKeys: String, CodingKey {
-                case channels
-        }
+final class FileResponse: NSObject, Decodable {
     
-        init(from decoder: Decoder) throws {
-                let values = try decoder.container(keyedBy: CodingKeys.self)
-                channels = try values.decodeIfPresent([Channel].self, forKey: .channels)
-        }
-
+	let data: DataClass
 }

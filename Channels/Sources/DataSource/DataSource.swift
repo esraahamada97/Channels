@@ -8,12 +8,14 @@
 
 import Foundation
 class DataSource {
-  static var shared = DataSource()
-  
-    var channels: [Channel] = []
-  private let decoder = JSONDecoder()
     
-    func loadDataFromJson() {
+  static var shared = DataSource()
+    
+    var channels: [Channel] = []
+    var eposides: [Media] = []
+    var categories: [Category] = []
+ 
+    func loadChannelDataFromJson() {
         
             if let path = Bundle.main.url(forResource: "Channels.Success", withExtension: "json") {
                 do {
@@ -22,7 +24,7 @@ class DataSource {
                     channels = jsonResult.data.channels ?? []
                    
                 } catch let error {
-                    print("parse error data: \(error)")
+                    print("parse error channel data: \(error)")
                     
                 }
 
@@ -32,4 +34,44 @@ class DataSource {
             }
 
     }
+    
+    func loadEposidesDataFromJson() {
+        
+            if let path = Bundle.main.url(forResource: "Episodes.Success", withExtension: "json") {
+                do {
+                    let data = try Data(contentsOf: path, options: .alwaysMapped)
+                    let jsonResult = try JSONDecoder().decode(FileResponse.self, from: data)
+                    eposides = jsonResult.data.media ?? []
+                   
+                } catch let error {
+                    print("parse error eposides data: \(error)")
+                    
+                }
+
+            } else {
+                print("Invalid filename/path.")
+                
+            }
+
+    }
+    
+    func loadCategoriesDataFromJson() {
+        
+            if let path = Bundle.main.url(forResource: "Category.Success", withExtension: "json") {
+                do {
+                    let data = try Data(contentsOf: path, options: .alwaysMapped)
+                    let jsonResult = try JSONDecoder().decode(FileResponse.self, from: data)
+                    categories = jsonResult.data.categories ?? []
+                } catch let error {
+                    print("parse error eposides data: \(error)")
+                    
+                }
+
+            } else {
+                print("Invalid filename/path.")
+                
+            }
+
+    }
+    
 }

@@ -1,5 +1,5 @@
 //
-//  Series.swift
+//  Media.swift
 //  Channels
 //
 //  Created by user on 4/28/20.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-final class Series: NSObject, Codable {
-    let title: String
+final class Media: NSObject, Codable {
+    let type, title: String
     let coverAsset: CoverAsset
-    let id: String?
+    let channel: Channel
 }

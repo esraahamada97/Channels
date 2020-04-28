@@ -9,5 +9,7 @@
 import Foundation
 
 protocol HomePresenterProtocol: BasePresenterProtocol {
-
+    func loadChannels()
+    func loadEposides()
+    func loadCategories()
 }
