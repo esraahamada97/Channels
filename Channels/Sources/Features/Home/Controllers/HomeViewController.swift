@@ -11,7 +11,6 @@ import UIKit
 import IGListKit
 
 class HomeViewController: BaseViewController {
-    
     @IBOutlet private weak var collectionView: UICollectionView!
     var cetegories: [Category] = []
     var channels: [Channel] = []
@@ -39,12 +38,20 @@ class HomeViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        adapter.collectionView = collectionView
-        adapter.dataSource = self
-        adapter.performUpdates(animated: true, completion: nil)
         presenter?.loadChannels()
         presenter?.loadEposides()
-        presenter?.loadCategories()
+       adapter.collectionView = collectionView
+       adapter.dataSource = self
+    
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+         
     }
 }
 
@@ -75,13 +82,15 @@ extension HomeViewController: HomeViewProtocol {
     
     func setCategories(categorieas: [Category]) {
         self.cetegories = categorieas
+        
     }
     
 }
 
 extension HomeViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-        return cetegories
+        presenter?.loadCategories()
+        return self.cetegories
 //        let sectionType: SectionType = .categories
 //        switch sectionType {
 //        case .categories:
@@ -92,15 +101,22 @@ extension HomeViewController: ListAdapterDataSource {
     }
 
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-       // switch object {
-            return CategoriesListSectionController()
-//        case is Category:
+        let sectionCont = CategoriesListSectionController.init(categories: self.cetegories)
+        if object is Category {
+          return sectionCont
+        } else {
+            return ListSectionController()
+        }
+//        if object is Category {
+//       // switch object {
 //            return CategoriesListSectionController()
-//        case is Media:
-//            return NewEposidesSectionController()
-//        default:
-//            return ListSectionController()
-//        }
+////        case is Category:
+////            return CategoriesListSectionController()
+////        case is Media:
+////            return NewEposidesSectionController()
+////        default:
+////            return ListSectionController()
+////        }
     }
 
     func emptyView(for listAdapter: ListAdapter) -> UIView? {
