@@ -19,9 +19,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fkA-iB-Pey">
-                    <rect key="frame" x="0.0" y="9" width="375" height="795"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fkA-iB-Pey">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                     <color key="backgroundColor" name="PrimaryColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="deB-XH-svu">
                         <size key="itemSize" width="50" height="50"/>
@@ -32,6 +31,12 @@
                 </collectionView>
             </subviews>
             <color key="backgroundColor" name="PrimaryColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fkA-iB-Pey" secondAttribute="bottom" id="7Jg-GZ-Fdd"/>
+                <constraint firstItem="fkA-iB-Pey" firstAttribute="trailing" secondItem="h4t-Pb-wpG" secondAttribute="trailing" id="INS-OZ-JpE"/>
+                <constraint firstItem="fkA-iB-Pey" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Jbk-F3-gOK"/>
+                <constraint firstItem="fkA-iB-Pey" firstAttribute="leading" secondItem="h4t-Pb-wpG" secondAttribute="leading" id="bZC-b6-Zma"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="h4t-Pb-wpG"/>
             <point key="canvasLocation" x="136.80000000000001" y="139.65517241379311"/>
         </view>

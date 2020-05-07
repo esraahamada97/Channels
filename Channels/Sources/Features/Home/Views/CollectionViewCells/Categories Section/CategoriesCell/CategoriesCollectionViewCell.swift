@@ -19,6 +19,7 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         containerView.layer.cornerRadius = 20
+      
     }
     
 }

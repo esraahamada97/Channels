@@ -15,9 +15,9 @@ import Foundation
 
 final class DataClass: NSObject, Codable {
     
-    let channels: [Channel]?
-    let media: [Media]?
-    let categories: [Category]?
+    var channels: [Channel]?
+    var media: [Media]?
+    var categories: [Category]?
 }
 
 enum SectionType: String, Codable, CodingKey {

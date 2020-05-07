@@ -12,8 +12,8 @@ import IGListKit
 
 class HomeViewController: BaseViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
-    var cetegories: [Category] = []
-    var channels: [Channel] = []
+    var dataClass: DataClass = DataClass()
+    var items: [ListDiffable] = []
     lazy var adapter: ListAdapter = {
         return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
     }()
@@ -38,9 +38,12 @@ class HomeViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         presenter?.loadChannels()
         presenter?.loadEposides()
+        presenter?.loadCategories()
        adapter.collectionView = collectionView
+        
        adapter.dataSource = self
     
     }
@@ -73,15 +76,15 @@ extension HomeViewController {
 // MARK: - Protocal
 extension HomeViewController: HomeViewProtocol {
     func setChannels(channels: [Channel]) {
-        self.channels = channels
+        dataClass.channels = channels
     }
     
     func setEposides(eposides: [Media]) {
-        
+        dataClass.media = eposides
     }
     
     func setCategories(categorieas: [Category]) {
-        self.cetegories = categorieas
+        dataClass.categories = categorieas
         
     }
     
@@ -89,8 +92,11 @@ extension HomeViewController: HomeViewProtocol {
 
 extension HomeViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-        presenter?.loadCategories()
-        return self.cetegories
+       
+        var items: [ListDiffable] = dataClass.categories ?? []
+//        items += dataClass.channels ?? []
+//        items += dataClass.media ?? []
+        return items
 //        let sectionType: SectionType = .categories
 //        switch sectionType {
 //        case .categories:
@@ -101,9 +107,8 @@ extension HomeViewController: ListAdapterDataSource {
     }
 
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-        let sectionCont = CategoriesListSectionController.init(categories: self.cetegories)
         if object is Category {
-          return sectionCont
+            return CategoriesListSectionController()
         } else {
             return ListSectionController()
         }

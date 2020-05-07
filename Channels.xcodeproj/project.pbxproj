@@ -50,6 +50,9 @@
 		CE6969662445BA5700A0BC94 /* Radomir Tinkov Free Font EULA .pdf in Resources */ = {isa = PBXBuildFile; fileRef = CE6969632445BA5700A0BC94 /* Radomir Tinkov Free Font EULA .pdf */; };
 		CE6969672445BA5700A0BC94 /* Gilroy-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE6969642445BA5700A0BC94 /* Gilroy-Light.otf */; };
 		CE6969682445BA5700A0BC94 /* Gilroy-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE6969652445BA5700A0BC94 /* Gilroy-ExtraBold.otf */; };
+		CE6EA19B246430B000C21670 /* EmbededCategoriesSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6EA19A246430B000C21670 /* EmbededCategoriesSectionController.swift */; };
+		CE6EA19F2464315A00C21670 /* EmbededCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6EA19D2464315A00C21670 /* EmbededCollectionViewCell.swift */; };
+		CE6EA1A02464315A00C21670 /* EmbededCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6EA19E2464315A00C21670 /* EmbededCollectionViewCell.xib */; };
 		CE8DBD9E24335E38008C5DB9 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DBD9C24335E38008C5DB9 /* SplashViewController.swift */; };
 		CE8DBD9F24335E38008C5DB9 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8DBD9D24335E38008C5DB9 /* SplashViewController.xib */; };
 		CE9B5911244E84D4005B093D /* ChannelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B590F244E84D4005B093D /* ChannelCollectionViewCell.swift */; };
@@ -135,6 +138,9 @@
 		CE6969632445BA5700A0BC94 /* Radomir Tinkov Free Font EULA .pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Radomir Tinkov Free Font EULA .pdf"; sourceTree = "<group>"; };
 		CE6969642445BA5700A0BC94 /* Gilroy-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.otf"; sourceTree = "<group>"; };
 		CE6969652445BA5700A0BC94 /* Gilroy-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraBold.otf"; sourceTree = "<group>"; };
+		CE6EA19A246430B000C21670 /* EmbededCategoriesSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbededCategoriesSectionController.swift; sourceTree = "<group>"; };
+		CE6EA19D2464315A00C21670 /* EmbededCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbededCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE6EA19E2464315A00C21670 /* EmbededCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmbededCollectionViewCell.xib; sourceTree = "<group>"; };
 		CE8DBD9C24335E38008C5DB9 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		CE8DBD9D24335E38008C5DB9 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		CE9B590F244E84D4005B093D /* ChannelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -244,6 +250,16 @@
 			path = Channels;
 			sourceTree = "<group>";
 		};
+		CE6EA19C246430E000C21670 /* Categories Section */ = {
+			isa = PBXGroup;
+			children = (
+				CE9B5918244E94ED005B093D /* CategoriesCell */,
+				CE6EA19D2464315A00C21670 /* EmbededCollectionViewCell.swift */,
+				CE6EA19E2464315A00C21670 /* EmbededCollectionViewCell.xib */,
+			);
+			path = "Categories Section";
+			sourceTree = "<group>";
+		};
 		CE8DBD9B24335E04008C5DB9 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,7 +272,7 @@
 		CE9B590B244E82FE005B093D /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				CE9B5918244E94ED005B093D /* CategoriesCell */,
+				CE6EA19C246430E000C21670 /* Categories Section */,
 				CE9B5913244E91BF005B093D /* SeriesCell */,
 				CE9B590E244E84AC005B093D /* ChannelCell */,
 			);
@@ -338,6 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC0BFF424583571000E03ED /* CategoriesListSectionController.swift */,
+				CE6EA19A246430B000C21670 /* EmbededCategoriesSectionController.swift */,
 			);
 			path = CategorySections;
 			sourceTree = "<group>";
@@ -690,6 +707,7 @@
 				CE6969572445BA4C00A0BC94 /* Roboto-Regular.ttf in Resources */,
 				CE6969562445BA4C00A0BC94 /* Roboto-Light.ttf in Resources */,
 				CE9B5921244E9B03005B093D /* TitleHeaderCollectionReusableView.xib in Resources */,
+				CE6EA1A02464315A00C21670 /* EmbededCollectionViewCell.xib in Resources */,
 				CE9B591C244E9514005B093D /* CategoriesCollectionViewCell.xib in Resources */,
 				CE5244E22455D3D5001D60AB /* Channels.Success.json in Resources */,
 				CE6969592445BA4C00A0BC94 /* Apache License.txt in Resources */,
@@ -808,8 +826,10 @@
 				CE03F2602457906A0071FBB4 /* Series.swift in Sources */,
 				CE9B5927244E9CFE005B093D /* CompositeHeaderCollectionReusableView.swift in Sources */,
 				CEE73C7F242A282F00A7DDB3 /* Container.swift in Sources */,
+				CE6EA19F2464315A00C21670 /* EmbededCollectionViewCell.swift in Sources */,
 				CE5244BA2455D27F001D60AB /* BaseModel.swift in Sources */,
 				CE5244B82455D27F001D60AB /* BaseModelProtocol.swift in Sources */,
+				CE6EA19B246430B000C21670 /* EmbededCategoriesSectionController.swift in Sources */,
 				CE5244ED2455D4BD001D60AB /* DataClass.swift in Sources */,
 				CEC0BFF024582409000E03ED /* NewEposidesSectionController.swift in Sources */,
 				CE9B5911244E84D4005B093D /* ChannelCollectionViewCell.swift in Sources */,

@@ -10,4 +10,5 @@ import Foundation
 
 final class Category: NSObject, Codable {
     let name: String
+     let itemCount: Int = 2
 }

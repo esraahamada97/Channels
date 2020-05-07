@@ -9,47 +9,57 @@
 import UIKit
 import IGListKit
 
-class CategoriesListSectionController: ListSectionController {
+class CategoriesListSectionController: ListSectionController, ListAdapterDataSource {
+    
    private var categoryObject: Category?
+   
+   var categories: [Category]?
     
-    var categorieas: [Category]?
-    init(categories: [Category]) {
-        self.categorieas = categories
+    override init() {
+        super.init()
+        self.minimumInteritemSpacing = 0
     }
+    lazy var adapter: ListAdapter = {
+           let adapter = ListAdapter(updater: ListAdapterUpdater(),
+                                     viewController: self.viewController)
+           adapter.dataSource = self
+           return adapter
+       }()
     
-    override func numberOfItems() -> Int {
-        
-        return 1
-        
-    }
   override func sizeForItem(at index: Int) -> CGSize {
-    guard let contextOfCollection = collectionContext,
-      let entry = categoryObject
-      else {
-        return .zero
-    }
-
-    let objectWidth = (contextOfCollection.containerSize.width - 16 - 16)/2 // dividing by 2 because
-                                                                            // you want 2 columns
-    return CGSize(width: objectWidth, height:objectWidth)
-  }
-
+    return CGSize(width: collectionContext?.containerSize.width ?? CGFloat(), height: 100)
+     }
+    
    override func cellForItem(at index: Int) -> UICollectionViewCell {
     
     guard let cell = collectionContext?.dequeueReusableCell(
-        withNibName: CategoriesCollectionViewCell.categoriesCellIdentifier,
+        withNibName: EmbededCollectionViewCell.embeddedCategoriesCellIdentifier,
         bundle: nil,
         for: self,
-        at: index) as? CategoriesCollectionViewCell else {
+        at: index) as? EmbededCollectionViewCell else {
             return UICollectionViewCell()
     }
-        
-    cell.bindViewModel(categoryObject)
-
+    adapter.collectionView = cell.embededCategoriosCollectionView
+    
        return cell
    }
 
    override func didUpdate(to object: Any) {
        self.categoryObject = object as? Category
+    
    }
+    
+    func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
+        guard let cat = categoryObject else {return []}
+        return [cat]
+    }
+    
+    func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
+        return EmbededCategoriesSectionController()
+    }
+    
+    func emptyView(for listAdapter: ListAdapter) -> UIView? {
+        return nil
+    }
+    
 }

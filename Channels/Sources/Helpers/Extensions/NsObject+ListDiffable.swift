@@ -15,6 +15,6 @@ extension NSObject: ListDiffable {
   }
 
   public func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
-    return isEqual(object)
+    return true
   }
 }
