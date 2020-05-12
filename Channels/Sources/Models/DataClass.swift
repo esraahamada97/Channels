@@ -25,3 +25,14 @@ enum SectionType: String, Codable, CodingKey {
     case channels
     case categories
 }
+
+class SectionContainer<T: NSObject>: NSObject {
+    var items: [T]
+    /// init the class with empty list
+    override init() {
+        self.items = []
+    }
+    required init(items: [T]) {
+        self.items = items
+    }
+}

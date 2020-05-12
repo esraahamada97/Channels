@@ -11,8 +11,15 @@ import UIKit
 import IGListKit
 
 class HomeViewController: BaseViewController {
+    
     @IBOutlet private weak var collectionView: UICollectionView!
+    
+     var categoriesSection = SectionContainer<Category>(items: [])
+    var data: [ListDiffable]?
+    
     var dataClass: DataClass = DataClass()
+    var dataClass1: DataClass = DataClass()
+    
     var items: [ListDiffable] = []
     lazy var adapter: ListAdapter = {
         return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
@@ -42,20 +49,16 @@ class HomeViewController: BaseViewController {
         presenter?.loadChannels()
         presenter?.loadEposides()
         presenter?.loadCategories()
+        data = [categoriesSection]
        adapter.collectionView = collectionView
-        
        adapter.dataSource = self
-    
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        adapter.performUpdates(animated: true, completion: nil)
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-         
-    }
+
 }
 
 // MARK: - IBActions
@@ -85,6 +88,7 @@ extension HomeViewController: HomeViewProtocol {
     
     func setCategories(categorieas: [Category]) {
         dataClass.categories = categorieas
+        categoriesSection.items = categorieas
         
     }
     
@@ -92,11 +96,12 @@ extension HomeViewController: HomeViewProtocol {
 
 extension HomeViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-       
-        var items: [ListDiffable] = dataClass.categories ?? []
+      
+       // let items = Array(0..<4)
+//            [ListDiffable] = dataClass.categories ?? []
 //        items += dataClass.channels ?? []
 //        items += dataClass.media ?? []
-        return items
+        return data ?? []
 //        let sectionType: SectionType = .categories
 //        switch sectionType {
 //        case .categories:
@@ -107,24 +112,27 @@ extension HomeViewController: ListAdapterDataSource {
     }
 
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-        if object is Category {
-            return CategoriesListSectionController()
-        } else {
-            return ListSectionController()
+        
+       if object is SectionContainer<Category> {
+           return CategoriesListSectionController()
+       } else {
+        return ListSectionController()
         }
-//        if object is Category {
-//       // switch object {
-//            return CategoriesListSectionController()
-////        case is Category:
-////            return CategoriesListSectionController()
-////        case is Media:
-////            return NewEposidesSectionController()
-////        default:
-////            return ListSectionController()
-////        }
+
+//       } else if object is SectionContainer<Offer> {
+//           if let presenter = self.presenter {
+//               return HomeEmbeddedSectionController(presenter: presenter)
+//           } else {
+//               return ListSectionController()
+//           }
+//       } else {
+//           return ListSectionController()
+//       }
+        
     }
 
     func emptyView(for listAdapter: ListAdapter) -> UIView? {
         return nil
     }
+    
 }

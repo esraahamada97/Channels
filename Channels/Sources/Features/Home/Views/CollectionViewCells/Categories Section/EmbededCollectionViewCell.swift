@@ -17,6 +17,8 @@ class EmbededCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         embededCategoriosCollectionView.backgroundColor = .red
-    }
+        
+            }
+   
 
 }

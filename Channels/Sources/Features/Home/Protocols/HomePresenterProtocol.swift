@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import IGListKit
 
 protocol HomePresenterProtocol: BasePresenterProtocol {
     func loadChannels()

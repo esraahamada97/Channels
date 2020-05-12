@@ -9,57 +9,57 @@
 import UIKit
 import IGListKit
 
-class CategoriesListSectionController: ListSectionController, ListAdapterDataSource {
+class CategoriesListSectionController: ListSectionController {
     
    private var categoryObject: Category?
-   
-   var categories: [Category]?
+    var categories: [Category] = []
+    
+    private var dataClass: DataClass?
+  
+    lazy var adapter: ListAdapter = {
+        return ListAdapter(updater: ListAdapterUpdater(), viewController: viewController)
+    }()
     
     override init() {
         super.init()
-        self.minimumInteritemSpacing = 0
+        inset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
+        minimumInteritemSpacing = 20
+        minimumLineSpacing = 20
+        //supplementaryViewSource = self
+        //displayDelegate = self
     }
-    lazy var adapter: ListAdapter = {
-           let adapter = ListAdapter(updater: ListAdapterUpdater(),
-                                     viewController: self.viewController)
-           adapter.dataSource = self
-           return adapter
-       }()
     
-  override func sizeForItem(at index: Int) -> CGSize {
-    return CGSize(width: collectionContext?.containerSize.width ?? CGFloat(), height: 100)
-     }
+    override func numberOfItems() -> Int {
+        return categories.count
+    }
+
+    override func sizeForItem(at index: Int) -> CGSize {
+        guard let context = collectionContext else { return .zero }
+        let width = context.containerSize(for: self).width
+        let widthItem = ((width + 20) / 2)
+        return CGSize(width: (widthItem - ( minimumInteritemSpacing )), height: 95)
+    }
     
    override func cellForItem(at index: Int) -> UICollectionViewCell {
     
     guard let cell = collectionContext?.dequeueReusableCell(
-        withNibName: EmbededCollectionViewCell.embeddedCategoriesCellIdentifier,
+        withNibName: CategoriesCollectionViewCell.categoriesCellIdentifier,
         bundle: nil,
         for: self,
-        at: index) as? EmbededCollectionViewCell else {
+        at: index) as?  CategoriesCollectionViewCell else {
             return UICollectionViewCell()
     }
-    adapter.collectionView = cell.embededCategoriosCollectionView
-    
+    cell.bindViewModel(categories[index])
        return cell
    }
 
    override func didUpdate(to object: Any) {
-       self.categoryObject = object as? Category
+       if let container = (object as? SectionContainer<Category>) {
+           self.categories = container.items
+       } else {
+           self.categories = []
+       }
     
    }
-    
-    func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-        guard let cat = categoryObject else {return []}
-        return [cat]
-    }
-    
-    func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-        return EmbededCategoriesSectionController()
-    }
-    
-    func emptyView(for listAdapter: ListAdapter) -> UIView? {
-        return nil
-    }
     
 }

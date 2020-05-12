@@ -7,18 +7,22 @@
 //
 
 import Foundation
-
+import IGListKit
 class HomePresenter<View: HomeViewProtocol, Model: HomeModelProtocol>:
 BasePresenter<View, Model>, HomePresenterProtocol {
     
     private var view: View?
     private var model: Model?
+   
     
     override init(view: View, model: Model) {
         self.model = model
         self.view = view
         super.init(view: view, model: model)
     }
+    
+    
+    
     func loadChannels() {
         guard let channels = model?.getChannelsFromDataSourse() else {
             print("channels are not loaded in presenter")
