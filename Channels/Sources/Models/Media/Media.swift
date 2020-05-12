@@ -13,3 +13,12 @@ final class Media: NSObject, Codable {
     let coverAsset: CoverAsset
     let channel: Channel
 }
+
+final class MainEposides: NSObject {
+    var mainEposides: [Media]
+
+    init(mainEposides: [Media]) {
+        self.mainEposides = mainEposides
+    }
+
+}

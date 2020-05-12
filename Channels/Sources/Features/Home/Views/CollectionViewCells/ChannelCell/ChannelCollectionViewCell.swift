@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IGListKit
 
 class ChannelCollectionViewCell: UICollectionViewCell {
     static let channelCellIdentifier: String = "ChannelCollectionViewCell"
@@ -27,8 +28,24 @@ class ChannelCollectionViewCell: UICollectionViewCell {
         imageContainerView.layer.cornerRadius = 10
     }
     
-    func configureCahnnelCell() {
+}
+
+extension ChannelCollectionViewCell: ListBindable {
+
+    func bindViewModel(_ viewModel: Any) {
+        guard let viewModel = viewModel as? Media else { return }
+        configureNewEposidesCell(eposide: viewModel)
         
     }
     
+    func configureNewEposidesCell(eposide: Media) {
+        guard let imageUrl = URL(string: eposide.coverAsset.url) else { return }
+        if let data = NSData(contentsOf: imageUrl) {
+            imageView.image = UIImage(data: data as Data)
+            }
+        titleLabel.text = eposide.title
+        subTitleLabel.text = eposide.channel.title
+    
+    }
+
 }
