@@ -9,10 +9,16 @@
 import UIKit
 
 class TitleHeaderCollectionReusableView: UICollectionReusableView {
-  static let TitleHeaderIdentifier: String = "TitleHeaderCollectionReusableView"
+  static let titleHeaderIdentifier: String = "TitleHeaderCollectionReusableView"
+     
+    @IBOutlet private weak var titleLabe: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
+    func configureHeader(title: String) {
+        titleLabe.text = title
+    }
 }

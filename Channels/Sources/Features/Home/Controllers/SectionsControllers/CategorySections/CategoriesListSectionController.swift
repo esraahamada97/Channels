@@ -25,7 +25,7 @@ class CategoriesListSectionController: ListSectionController {
         inset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
         minimumInteritemSpacing = 20
         minimumLineSpacing = 20
-        //supplementaryViewSource = self
+        supplementaryViewSource = self
         //displayDelegate = self
     }
     
@@ -62,4 +62,32 @@ class CategoriesListSectionController: ListSectionController {
     
    }
     
+}
+
+extension CategoriesListSectionController: ListSupplementaryViewSource {
+    func supportedElementKinds() -> [String] {
+        return [UICollectionView.elementKindSectionHeader]
+    }
+    
+    func viewForSupplementaryElement(ofKind elementKind: String, at index: Int) -> UICollectionReusableView {
+               return categoriesHeaderView(atIndex: index)
+    }
+    
+    func sizeForSupplementaryView(ofKind elementKind: String, at index: Int) -> CGSize {
+        return CGSize(width: collectionContext?.containerSize.width ?? 200, height: 80)
+    }
+    
+    private func categoriesHeaderView(atIndex index: Int) -> UICollectionReusableView {
+           guard let view = collectionContext?.dequeueReusableSupplementaryView(
+            ofKind: UICollectionView.elementKindSectionHeader,
+            for: self,
+            nibName: TitleHeaderCollectionReusableView.titleHeaderIdentifier,
+            bundle: nil,
+            at: index) as? TitleHeaderCollectionReusableView else {
+                fatalError("no categories section totle header")
+           }
+        view.configureHeader(title: "Browse by categories")
+           return view
+       }
+
 }

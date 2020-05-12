@@ -96,19 +96,7 @@ extension HomeViewController: HomeViewProtocol {
 
 extension HomeViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-      
-       // let items = Array(0..<4)
-//            [ListDiffable] = dataClass.categories ?? []
-//        items += dataClass.channels ?? []
-//        items += dataClass.media ?? []
         return data ?? []
-//        let sectionType: SectionType = .categories
-//        switch sectionType {
-//        case .categories:
-//            return self.cetegories
-//        default:
-//            return self.channels
-//        }
     }
 
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
