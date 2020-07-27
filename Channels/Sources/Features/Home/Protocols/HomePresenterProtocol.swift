@@ -10,7 +10,7 @@ import Foundation
 import IGListKit
 
 protocol HomePresenterProtocol: BasePresenterProtocol {
-    func loadChannels()
     func loadEposides()
+    func loadChannels()
     func loadCategories()
 }

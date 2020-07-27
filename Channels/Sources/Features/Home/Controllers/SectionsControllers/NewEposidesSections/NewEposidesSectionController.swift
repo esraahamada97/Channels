@@ -30,20 +30,21 @@ class NewEposidesSectionController: ListSectionController {
             return CGSize(width: collectionContext?.containerSize.width ?? 0, height: 520)
         }
 
-        override func cellForItem(at index: Int) -> UICollectionViewCell {
-            guard let cell = collectionContext?.dequeueReusableCell(
-                withNibName: EmbeddedCollectionViewCell.embeddedCellIdentifier,
-                bundle: nil,
-                for: self,
-                at: index) as?  EmbeddedCollectionViewCell else {
-                       return UICollectionViewCell()
-               }
-            //will put here the collection view
-            let embeddedCollectionView = cell.getCollectionView()
-            adapter.collectionView = embeddedCollectionView
-            return cell
-        }
-
+       override func cellForItem(at index: Int) -> UICollectionViewCell {
+        
+                  guard let cell = collectionContext?.dequeueReusableCell(
+                      withNibName: EmbeddedCollectionViewCell.embeddedCellIdentifier,
+                      bundle: nil,
+                      for: self,
+                      at: index) as?  EmbeddedCollectionViewCell else {
+                             return UICollectionViewCell()
+                     }
+                  //will put here the collection view
+                  let embeddedCollectionView = cell.getCollectionView()
+                  adapter.collectionView = embeddedCollectionView
+                  return cell
+              }
+    
         override func didUpdate(to object: Any) {
             if let eposidesContainer = object as? SectionContainer<Media> {
                 let container = MainEposides(mainEposides: eposidesContainer.items)

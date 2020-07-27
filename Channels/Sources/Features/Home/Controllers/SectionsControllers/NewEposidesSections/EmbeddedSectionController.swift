@@ -20,7 +20,7 @@ class EmbeddedSectionController: ListSectionController {
     
     override func didUpdate(to object: Any) {
         if let eposides = object as? MainEposides {
-            self.eposides = eposides.mainEposides
+            self.eposides = eposides.mainEposides 
         }
     }
     

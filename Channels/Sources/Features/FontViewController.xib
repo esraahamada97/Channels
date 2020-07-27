@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FontViewController" customModule="Channels" customModuleProvider="target">
+            <connections>
+                <outlet property="firstLabel" destination="KRq-q5-gcF" id="p78-NU-r9W"/>
+                <outlet property="secoundLabel" destination="hoM-Cu-Z0M" id="lxf-b6-YzT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="languagechange" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRq-q5-gcF">
+                    <rect key="frame" x="37" y="228" width="357" height="14"/>
+                    <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="languagechange"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoM-Cu-Z0M">
+                    <rect key="frame" x="30" y="430.5" width="357" height="20"/>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="languagedescription"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="languagechange" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PS1-dw-zIg">
+                    <rect key="frame" x="29" y="488" width="357" height="133"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hoM-Cu-Z0M" secondAttribute="trailing" constant="27" id="Byu-L2-llN"/>
+                <constraint firstItem="PS1-dw-zIg" firstAttribute="top" secondItem="hoM-Cu-Z0M" secondAttribute="bottom" constant="37.5" id="DZM-sX-P4W"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PS1-dw-zIg" secondAttribute="trailing" constant="28" id="I20-oQ-XiN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="PS1-dw-zIg" secondAttribute="bottom" constant="241" id="Pss-Qg-zOj"/>
+                <constraint firstItem="hoM-Cu-Z0M" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="QcV-Pb-3TP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KRq-q5-gcF" secondAttribute="trailing" constant="20" id="Qxw-SF-58G"/>
+                <constraint firstItem="KRq-q5-gcF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="184" id="kKQ-tQ-LHM"/>
+                <constraint firstItem="KRq-q5-gcF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="37" id="mIl-Ly-p4n"/>
+                <constraint firstItem="PS1-dw-zIg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="29" id="x9d-Ac-LfO"/>
+                <constraint firstItem="hoM-Cu-Z0M" firstAttribute="top" secondItem="KRq-q5-gcF" secondAttribute="bottom" constant="188.5" id="xxj-i2-B9K"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="128.57142857142856"/>
+        </view>
+    </objects>
+</document>

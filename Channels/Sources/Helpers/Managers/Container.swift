@@ -16,4 +16,8 @@ class Container {
     class func getSplashScene() -> UIViewController {
         return SplashViewController()
     }
+    
+    class func getFontScene() -> UIViewController {
+        return FontViewController()
+    }
 }

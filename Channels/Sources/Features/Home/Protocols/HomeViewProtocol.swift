@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HomeViewProtocol: BaseViewProtocol {
-    func setChannels(channels: [Channel])
     func setEposides(eposides: [Media])
+    func setChannels(channels: [Channel])
     func setCategories(categorieas: [Category])
 }

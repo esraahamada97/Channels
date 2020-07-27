@@ -9,7 +9,7 @@
 import Foundation
 
 protocol HomeModelProtocol: BaseModelProtocol {
-    func getChannelsFromDataSourse() -> [Channel]
     func getEposidesFromDataSourse() -> [Media]
+    func getChannelsFromDataSourse() -> [Channel]
     func getCategopriesFromDataSourse() -> [Category]
 }

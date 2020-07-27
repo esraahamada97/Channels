@@ -11,3 +11,10 @@ final class Channel: NSObject, Codable {
     let slug: String?
     
 }
+final class MainChannels: NSObject {
+var mainChannels: [Channel]
+
+init(mainChannels: [Channel]) {
+    self.mainChannels = mainChannels
+}
+}

@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashViewController" customModule="Channels" customModuleProvider="target">
             <connections>
-                <outlet property="containerView" destination="NwU-po-jwp" id="EyJ-LN-iHB"/>
+                <outlet property="myImageView" destination="THW-cY-6bd" id="bDa-If-Yhl"/>
+                <outlet property="myLabel" destination="b5W-Ev-5ze" id="vrM-Ad-HM7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,34 +19,29 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NwU-po-jwp">
-                    <rect key="frame" x="82" y="323" width="250" height="250"/>
-                    <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music" translatesAutoresizingMaskIntoConstraints="NO" id="THW-cY-6bd">
-                            <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
-                        </imageView>
-                    </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <constraints>
-                        <constraint firstAttribute="trailing" secondItem="THW-cY-6bd" secondAttribute="trailing" id="1oQ-jt-hsk"/>
-                        <constraint firstAttribute="width" constant="250" id="5Kn-ih-RM4"/>
-                        <constraint firstAttribute="bottom" secondItem="THW-cY-6bd" secondAttribute="bottom" id="IHe-ya-Fm8"/>
-                        <constraint firstItem="THW-cY-6bd" firstAttribute="top" secondItem="NwU-po-jwp" secondAttribute="top" id="JbF-ed-rql"/>
-                        <constraint firstAttribute="height" constant="250" id="cLV-hj-BDD"/>
-                        <constraint firstItem="THW-cY-6bd" firstAttribute="leading" secondItem="NwU-po-jwp" secondAttribute="leading" id="hqy-PZ-EBX"/>
-                    </constraints>
-                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music" translatesAutoresizingMaskIntoConstraints="NO" id="THW-cY-6bd">
+                    <rect key="frame" x="129" y="307" width="156" height="91"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لأن حب القراءة تبدأ من ضمَّة مُربي" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5W-Ev-5ze">
+                    <rect key="frame" x="30" y="438" width="354" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="NwU-po-jwp" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="01n-3X-xGG"/>
-                <constraint firstItem="NwU-po-jwp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="h16-WA-3hX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="b5W-Ev-5ze" secondAttribute="trailing" constant="30" id="7VB-8G-Vpm"/>
+                <constraint firstItem="b5W-Ev-5ze" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="D8F-I7-XEX"/>
+                <constraint firstItem="THW-cY-6bd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="LwX-Ns-zht"/>
+                <constraint firstItem="b5W-Ev-5ze" firstAttribute="top" secondItem="THW-cY-6bd" secondAttribute="bottom" constant="40" id="g0j-re-Tsc"/>
+                <constraint firstItem="b5W-Ev-5ze" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="svI-Em-8wG"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="128.57142857142856"/>
         </view>
     </objects>
     <resources>
-        <image name="music" width="853" height="846"/>
+        <image name="music" width="156" height="91"/>
     </resources>
 </document>

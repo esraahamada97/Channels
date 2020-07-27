@@ -16,7 +16,8 @@ class HomeViewController: BaseViewController {
     
     var categoriesSection = SectionContainer<Category>(items: [])
     var eposidesSection = SectionContainer<Media>(items: [])
-    var data: [ListDiffable]?
+    var channelSection = SectionContainer<Channel>(items: [])
+    var data: [ListDiffable] = []
     lazy var adapter: ListAdapter = {
         return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
     }()
@@ -41,11 +42,11 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        presenter?.loadChannels()
         presenter?.loadEposides()
+        presenter?.loadChannels()
         presenter?.loadCategories()
-        data = [eposidesSection, categoriesSection]
+        data = [eposidesSection, channelSection, categoriesSection]
+        
         adapter.collectionView = collectionView
         adapter.dataSource = self
     }
@@ -75,22 +76,30 @@ extension HomeViewController {
 // MARK: - Protocal
 extension HomeViewController: HomeViewProtocol {
     func setChannels(channels: [Channel]) {
+        channelSection.items = channels
+        //        for item in channels {
+        //            let channelSectin = SectionContainer<LatestMedia>(items: [])
+        //            channelSectin.items = item.latestMedia ?? []
+        //            data.append(channelSectin)
+        //        }
+        
     }
     
     func setEposides(eposides: [Media]) {
         eposidesSection.items = eposides
+        //        data.append(eposidesSection)
     }
     
     func setCategories(categorieas: [Category]) {
         categoriesSection.items = categorieas
-        
+        //data.append(categoriesSection)
     }
     
 }
 
 extension HomeViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-        return data ?? []
+        return data
     }
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
@@ -99,6 +108,8 @@ extension HomeViewController: ListAdapterDataSource {
             return CategoriesListSectionController()
         } else if object is SectionContainer<Media> {
             return NewEposidesSectionController()
+        } else if object is SectionContainer<Channel> {
+            return ChannelsSectionCotroller()
         } else {
             return ListSectionController()
         }
